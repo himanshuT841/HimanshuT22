@@ -1,0 +1,22 @@
+interface Calculator {
+    void add(int a, int b);
+    void multiply(int a, int b);
+}
+
+class MyCalc implements Calculator {
+    public void add(int a, int b) {
+        System.out.println("Addition: " + (a + b));
+    }
+
+    public void multiply(int a, int b) {
+        System.out.println("Multiplication: " + (a * b));
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        MyCalc calc = new MyCalc();
+        calc.add(10, 20);
+        calc.multiply(5, 6);
+    }
+}
