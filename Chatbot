@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Date;
+
+public class ChatBotSimple {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input;
+
+        System.out.println("Welcome! I am JavaBot. Type 'bye' to exit.");
+
+        while (true) {
+            System.out.print("You: ");
+            input = sc.nextLine().toLowerCase();
+
+            if (input.contains("bye")) {
+                System.out.println("Bot: Goodbye!");
+                break;
+            } else if (input.contains("hello")) {
+                System.out.println("Bot: Hello! Nice to meet you.");
+            } else if (input.contains("time")) {
+                System.out.println("Bot: Current time is " + new Date());
+            } else {
+                System.out.println("Bot: I'm still learning. Try 'hello', 'time' or 'bye'.");
+            }
+        }
+    }
+}
