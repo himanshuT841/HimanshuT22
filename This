@@ -1,0 +1,18 @@
+class Car {
+    String model;
+
+    Car(String model) {
+        this.model = model; // Refers to current object’s model
+    }
+
+    void show() {
+        System.out.println("Car model: " + model);
+    }
+}
+
+public class ThisSimple {
+    public static void main(String[] args) {
+        Car c = new Car("Honda City");
+        c.show();
+    }
+}
