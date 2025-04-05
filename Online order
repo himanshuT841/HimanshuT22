@@ -1,0 +1,38 @@
+class Order {
+    String product;
+    int quantity;
+    double price;
+
+    Order(String product) {
+        this(product, 1); // Chain to second constructor
+    }
+
+    Order(String product, int quantity) {
+        this(product, quantity, 100.0); // Chain to third constructor
+    }
+
+    Order(String product, int quantity, double price) {
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    void showBill() {
+        System.out.println("Product: " + product);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Unit Price: ₹" + price);
+        System.out.println("Total: ₹" + (quantity * price));
+    }
+}
+
+public class ConstructorChainingExample {
+    public static void main(String[] args) {
+        Order o1 = new Order("Notebook");
+        o1.showBill();
+
+        System.out.println();
+
+        Order o2 = new Order("Pen", 10, 15.5);
+        o2.showBill();
+    }
+}
